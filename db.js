@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const mongoURI = "mongodb://localhost:27017/notebookdata"
+const mongoURI = process.env.MONGO_URL 
 const connectToMongo=()=>{
   mongoose.connect(mongoURI);
   console.log("connected to mongo");
